@@ -1,0 +1,14 @@
+C:\Users\Gergo\HelloDevOps\bin\Debug\net8.0\HelloDevOps.exe
+C:\Users\Gergo\HelloDevOps\bin\Debug\net8.0\HelloDevOps.deps.json
+C:\Users\Gergo\HelloDevOps\bin\Debug\net8.0\HelloDevOps.runtimeconfig.json
+C:\Users\Gergo\HelloDevOps\bin\Debug\net8.0\HelloDevOps.dll
+C:\Users\Gergo\HelloDevOps\bin\Debug\net8.0\HelloDevOps.pdb
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\HelloDevOps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\HelloDevOps.AssemblyInfoInputs.cache
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\HelloDevOps.AssemblyInfo.cs
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\HelloDevOps.csproj.CoreCompileInputs.cache
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\HelloDevOps.dll
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\refint\HelloDevOps.dll
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\HelloDevOps.pdb
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\HelloDevOps.genruntimeconfig.cache
+C:\Users\Gergo\HelloDevOps\obj\Debug\net8.0\ref\HelloDevOps.dll
