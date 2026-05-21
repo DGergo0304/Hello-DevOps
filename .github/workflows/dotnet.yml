@@ -23,10 +23,10 @@ jobs:
         run: dotnet build --no-restore
 
       - name: Run program
-        run: dotnet run --project HelloDevOps/HelloDevOps.csproj
+        run: dotnet run --project HelloDevOps.csproj
 
       - name: Run tests
-        run: dotnet test HelloDevOps.Tests/HelloDevOps.Tests.csproj --no-build --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults
+        run: dotnet test HelloDevOps.Tests/HelloDevOps.Tests.csproj --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults
 
       - name: Create issue on test failure
         if: failure()
