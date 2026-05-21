@@ -1,7 +1,7 @@
 name: .NET CI
 
-on: 
-  push: 
+on:
+  push:
     branches: [ "main" ]
 
 jobs:
@@ -10,11 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
+
       - name: Restore dependencies
         run: dotnet restore
 
@@ -22,4 +23,32 @@ jobs:
         run: dotnet build --no-restore
 
       - name: Run program
-        run: dotnet run 
+        run: dotnet run --project HelloDevOps/HelloDevOps.csproj
+
+      - name: Run tests
+        run: dotnet test HelloDevOps.Tests/HelloDevOps.Tests.csproj --no-build --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults
+
+      - name: Create issue on test failure
+        if: failure()
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/ISSUE_TEMPLATE.md
+
+      - name: Publish test results
+        uses: dorny/test-reporter@v1
+        if: always()   
+        with:
+          name: MSTest Results
+          path: ./TestResults/*.trx
+          reporter: dotnet-trx
+
+      - name: Create Release
+        if: success()
+        uses: ncipollo/release-action@v1
+        with:
+          tag: "v1.0.${{ github.run_number }}"
+          name: "Release v1.0.${{ github.run_number }}"
+          body: "Automatikus release – tesztek sikeresek ✅"
+          token: ${{ secrets.GITHUB_TOKEN }}

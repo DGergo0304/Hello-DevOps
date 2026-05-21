@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HelloDevOps.csproj" />
+  <Project Path="HelloDevOps.Tests/HelloDevOps.Tests.csproj" />
+</Solution>

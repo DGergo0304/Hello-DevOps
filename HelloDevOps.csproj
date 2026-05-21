@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="HelloDevOps.Tests/**" />
+    <Content Remove="HelloDevOps.Tests/**" />
+    <EmbeddedResource Remove="HelloDevOps.Tests/**" />
+    <None Remove="HelloDevOps.Tests/**" />
+  </ItemGroup>
 </Project>
