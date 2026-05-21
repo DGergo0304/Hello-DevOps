@@ -9,7 +9,7 @@ public class Test1
     public void Test_OnePlusOne_IsTwo()
     {
         int result = 1 + 1;
-        Assert.AreEqual(3, result);
+        Assert.AreEqual(2, result);
     }
 
     [TestMethod]
